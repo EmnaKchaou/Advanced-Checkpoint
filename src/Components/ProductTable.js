@@ -4,15 +4,23 @@ import PropTypes from 'prop-types';
 const ProductTable = (products) => {
     return (
         <div>
-        { products.map(product => { 
+        <table>
+        <tr>
+        <th>category </th>
+        <th>name </th>
+        <th>price </th>
+       
+        {
+            products.map(product => { 
             return(
-                <table>
+                
                         <tr>{product.category}</tr>
                         <tr>{product.name}</tr>
                         <tr>{product.price}</tr>
-                 </table>
+               
             )          
         }
+     </table>
         )
         }
         </div>
